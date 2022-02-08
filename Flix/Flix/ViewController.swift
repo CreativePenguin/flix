@@ -59,10 +59,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let movie = self.movies[indexPath.row]
         cell.movieTitle.text = movie["title"] as? String
         cell.movieDescription.text = movie["overview"] as? String
-        
+
         let baseUrl = "https://image.tmdb.org/t/p/w185"
         let imageUrl = URL(string: baseUrl + (movie["image"] as! String))
         cell.movieImage.af.setImage(withURL: imageUrl!)
+//        let cell = UITableViewCell()
+//        cell.textLabel!.text = "row: \(indexPath.row)"
         
         return cell
     }
