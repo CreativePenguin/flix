@@ -17,6 +17,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
         
         let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
@@ -34,24 +36,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
                  self.movies = dataDictionary["results"] as! [[String: Any]]
 //                 print("movie list coming up")
+//                 print(self.movies.count)
+//                 print(self.movies[0])
+                 self.tableView.rowHeight = 150
 //                 print(self.movies[0]["title"].unsafelyUnwrapped)
 //                 print(self.movies)
 //                 print(self.movies["release_date"])
 //                 print(type(self.movies["title"]))
 //                 print(self.movies["title"])
                     // TODO: Reload your table view data
-
+                 self.tableView.reloadData()
              }
         }
-        
-        tableView.delegate = self
-        tableView.dataSource = self
         
         task.resume()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        movies.count
+        self.movies.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -61,7 +63,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.movieDescription.text = movie["overview"] as? String
 
         let baseUrl = "https://image.tmdb.org/t/p/w185"
-        let imageUrl = URL(string: baseUrl + (movie["image"] as! String))
+        let imageUrl = URL(string: baseUrl + (movie["poster_path"] as! String))
         cell.movieImage.af.setImage(withURL: imageUrl!)
 //        let cell = UITableViewCell()
 //        cell.textLabel!.text = "row: \(indexPath.row)"
