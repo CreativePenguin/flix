@@ -26,6 +26,7 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 <img src="/flix-app.gif" width=250><br>
 
 ### Notes
-Challenges: Thought I was supposed to do lab before the assignment first. Also accidentally put tableView.delegate = self, and tableView.dataSource = self at the end of the viewDidLoad function instead of the beginning.
-Also, I couldn't figure out how to get the project to show up properly, so it's just a folder inside of a larger git repo.
+Challenges:  
+Thought I was supposed to do lab before the assignment first. Also accidentally put tableView.delegate = self, and tableView.dataSource = self at the end of the viewDidLoad function instead of the beginning.  
+Also, I couldn't figure out how to get the project to show up properly, so it's just a folder inside of a larger git repo.  
 I'm pretty dumb.
