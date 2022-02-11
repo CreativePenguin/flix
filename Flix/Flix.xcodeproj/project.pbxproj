@@ -18,6 +18,7 @@
 		9B15049D27B1B65B007884CB /* FlixUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B15049C27B1B65B007884CB /* FlixUITestsLaunchTests.swift */; };
 		9B1504AB27B2201B007884CB /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9B1504AA27B2201B007884CB /* AlamofireImage */; };
 		9B1504AD27B256C4007884CB /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1504AC27B256C4007884CB /* MovieCell.swift */; };
+		9B3BBB2E27B6E77000D89286 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3BBB2D27B6E77000D89286 /* MovieDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		9B15049A27B1B65B007884CB /* FlixUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlixUITests.swift; sourceTree = "<group>"; };
 		9B15049C27B1B65B007884CB /* FlixUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlixUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9B1504AC27B256C4007884CB /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		9B3BBB2D27B6E77000D89286 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				9B15048427B1B65B007884CB /* LaunchScreen.storyboard */,
 				9B15048727B1B65B007884CB /* Info.plist */,
 				9B1504AC27B256C4007884CB /* MovieCell.swift */,
+				9B3BBB2D27B6E77000D89286 /* MovieDetailsViewController.swift */,
 			);
 			path = Flix;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B3BBB2E27B6E77000D89286 /* MovieDetailsViewController.swift in Sources */,
 				9B15047E27B1B653007884CB /* ViewController.swift in Sources */,
 				9B15047A27B1B653007884CB /* AppDelegate.swift in Sources */,
 				9B1504AD27B256C4007884CB /* MovieCell.swift in Sources */,
