@@ -35,7 +35,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                  // TODO: Store the movies in a property to use elsewhere
 
                  self.movies = dataDictionary["results"] as! [[String: Any]]
-//                 print("movie list coming up")
+                 print("movie list coming up")
 //                 print(self.movies.count)
 //                 print(self.movies[0])
                  self.tableView.rowHeight = 150
@@ -71,6 +71,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
 
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        print("Loading up details string")
+    }
 }
 
